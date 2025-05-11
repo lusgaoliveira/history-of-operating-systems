@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>História dos Sistemas Operacionais</title>
+  <link rel="stylesheet" href="css/tree.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+  <h1>História dos Sistemas Operacionais</h1>
+  <div class="container">
+    <div class = "theory">
+      Seguindo o que Tanenbaum diz no seu livro Sistemas Operacionais Modernos. 
+      O sistema operacional é a camada de software fundamental que fica entre o 
+      hardware do seu dispositivo e os aplicativos que você usa. Ele torna o hardware 
+      utilizável pelos programas de uma forma organizada e fácil. Sem ele, seus aplicativos 
+      não conseguiriam "conversar" com o hardware e o seu dispositivo não funcionaria de 
+      maneira inteligente.
+
+
+      Seguindo o livro do Tanenbaum, a história dos sistemas operacionais pode ser 
+      resumida em algumas fases principais, cada uma respondendo a limitações e 
+      necessidades da época:
+
+      <div class = "os_history">
+        <ol>
+            <li>A Era dos Primeiros Computadores (Décadas de 40 e 50): Aqui não existiam 
+                sistemas operacionais como conhecemos hoje. A programação era feita diretamente 
+                no hardware, com tarefas executadas sequencialmente. Era tudo muito manual e dependente do operador. Pense em cada programa "reservando" a máquina inteira para si.
+            </li>
+
+            <li>
+                Os Primeiros Sistemas Batch (Década de 50 e 60): Para otimizar o uso das 
+                máquinas caras, surgiram os sistemas batch. Tarefas semelhantes eram 
+                agrupadas em "lotes" e processadas sequencialmente, sem interação do usuário 
+                durante a execução. Um programa terminava, e o próximo lote era carregado. O 
+                foco era aumentar a taxa de utilização do hardware.
+            </li>
+
+            <li>
+                Sistemas Multiprogramados (Década de 60): A ideia era manter a CPU ocupada o 
+                máximo possível. Vários programas eram carregados na memória ao mesmo tempo. 
+                Enquanto um programa esperava por uma operação de entrada/saída (como ler um 
+                arquivo), a CPU podia executar outro programa. Isso aumentou ainda mais a 
+                eficiência.
+            </li>
+
+            <li>
+                Sistemas Time-Sharing (Década de 60 e 70): Uma evolução da multiprogramação, 
+                o time-sharing permitiu que múltiplos usuários interagissem com o computador 
+                simultaneamente. Cada usuário recebia pequenas fatias de tempo da CPU, 
+                criando a ilusão de que cada um tinha a máquina para si. Isso foi crucial 
+                para o desenvolvimento de sistemas interativos.
+            </li>
+
+            <li>
+                O Surgimento dos Microcomputadores e Sistemas Pessoais (Década de 70 e 80): 
+                Com a popularização dos computadores pessoais, surgiram sistemas operacionais 
+                focados na experiência do usuário individual, como o CP/M, DOS e, 
+                posteriormente, o Macintosh OS e o Windows. A interface gráfica começou a 
+                ganhar destaque.
+            </li>
+
+            <li>
+                Sistemas Operacionais Modernos (Década de 90 até hoje): Esta fase é 
+                marcada pela diversificação e sofisticação. Temos sistemas como o Unix e 
+                seus derivados (Linux, macOS) que são poderosos e flexíveis, o Windows que 
+                domina o mercado de desktops, e sistemas embarcados e móveis como Android e 
+                iOS, otimizados para dispositivos específicos. A computação em rede, a 
+                segurança e a usabilidade se tornaram cada vez mais importantes.
+            </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>Tipos de Kernel</h2>
+
+    <ul>
+      <li>
+        <h4>MonoKernel:</h4>
+
+        <p>
+          Em um sistema monolítico, o SO funciona como um grande bloco de código 
+          executando em modo núcleo (kernel), com acesso irrestrito ao hardware e 
+          memória. Seus componentes internos interagem livremente, sem barreiras de 
+          comunicação. 
+        </p>
+        
+        Vantagens:
+        <ol>
+            <li>
+              Alto desempenho: Componentes acessam diretamente hardware, memória e 
+              outros módulos, evitando overhead de comunicação.
+            </li>
+
+            <li>
+              Sistemas compactos: Não requer mecanismos complexos para interação 
+              entre partes do núcleo.
+            </li>
+        </ol>
+
+        Desvantagens:
+        <ol>
+            <li>
+              Falta de robustez: Um erro em um componente 
+              (ex.: acesso inválido à memória) pode travar todo o sistema.
+            </li>
+
+            <li>
+              Complexidade de desenvolvimento/manutenção: Componentes são altamente 
+              interdependentes, tornando mudanças arriscadas 
+              (alterações podem impactar funcionalidades inesperadas).
+            </li>
+        </ol>
+
+        Exemplos:
+        <ol>
+            <li>
+              Sistemas antigos como UNIX e MS-DOS.
+            </li>
+
+            <li>
+              Linux (apesar de modularizado progressivamente desde a versão 2.0).
+            </li>
+
+            <li>
+              FreeBSD (núcleo monolítico, mas organizado).
+            </li>
+        </ol>
+        A arquitetura monolítica é eficiente, mas sua falta de isolamento entre componentes a torna vulnerável a falhas e de difícil evolução. Sistemas modernos adotam abordagens híbridas para equilibrar desempenho e segurança.
+
+      </li>
+
+      <li>
+        <h4>Micro Kernel:</h4>
+        <p>
+          No modelo de micronúcleo, o SO mantém no núcleo (kernel) apenas funções 
+          essenciais de baixo nível (gerência de tarefas, memória protegida e 
+          comunicação entre processos), transferindo serviços de alto nível 
+          (como sistemas de arquivos, drivers e políticas de recursos) 
+          para processos em espaço de usuário (chamados serviços ou servidores).
+        </p>
+
+        Vantagens:
+        <ol>
+          <li>
+            Modularidade: Serviços são desenvolvidos e atualizados independentemente.
+          </li>
+
+          <li>
+            Robustez: Falhas em serviços não derrubam o núcleo 
+            (são isoladas pela proteção de memória).
+          </li>
+          
+          <li>
+            Flexibilidade: Serviços podem ser carregados/desativados dinamicamente.
+          </li>
+        </ol>
+
+        Desvantagens:
+
+        <ol>
+          <li>
+            Desempenho inferior: Comunicação entre serviços/núcleo 
+            exige troca de mensagens (chamadas de sistema custosas) e 
+            cópias de dados, gerando overhead.
+          </li>
+          <li>
+            Complexidade: Mecanismos de comunicação (ex.: troca de mensagens) 
+            aumentam a arquitetura do sistema.
+          </li>
+        </ol>
+
+        Exemplos:
+
+        <ol>
+          <li>
+            Minix 3: Núcleo gerencia apenas interrupções, CPU/MMU e mensagens; 
+            serviços (como sistema de arquivos) rodam como processos isolados.
+          </li>
+
+          <li>
+            QNX: Usado em sistemas embarcados críticos (ex.: robótica, medical).
+          </li>
+
+          <li>
+            Mach e Chorus: Pioneiros nos anos 1980, influenciaram núcleos híbridos modernos.
+          </li>
+        </ol>
+        Micronúcleos priorizam segurança e modularidade, mas sacrificam desempenho. 
+        Por isso, sistemas modernos adotam abordagens híbridas, equilibrando eficiência e 
+        isolamento de componentes.
+      </li>
+
+      <li>
+        <h4>Arquitetura em Camadas:</h4>
+        <p>
+          A abordagem por camadas organiza o SO em níveis hierárquicos, 
+          onde cada camada oferece abstrações crescentes sobre o hardware, 
+          isolando funcionalidades e privilegiando modularidade.
+        </p>
+
+        Características:
+        <ol>
+          <li>
+            Hierárquia de Privilégios:
+
+            <ul>
+              <li>Camada inferior: Acesso direto ao hardware (ex.: drivers).</li>
+              <li>Camadas intermediárias: Gerência de recursos (memória, processos, arquivos).</li>
+              <li>Camada superior: Interface com aplicações (chamadas de sistema).</li>
+            </ul>
+          </li>
+
+          <li>
+            Isolamento: Camadas superiores não acessam hardware diretamente, apenas serviços das camadas abaixo.
+          </li>
+        </ol>
+
+        Vantagens:
+        <ol>
+          <li>
+            Modularidade: Facilita desenvolvimento e manutenção 
+            (camadas podem ser testadas/atualizadas separadamente).
+          </li>
+
+          <li>
+            Segurança: Privilégios decrescentes limitam impactos de falhas.
+          </li>
+          
+          <li>
+            Abstração: Cada camada esconde complexidade da inferior 
+            (ex.: HAL no Windows NT abstrai diferenças de hardware).
+          </li>
+        </ol>
+
+        Desvantagens:
+
+        <ol>
+          <li>
+            Overhead de desempenho: Comunicação entre camadas exige validações e 
+            transformações de dados.
+          </li>
+          <li>
+            Rigidez: Dependências entre camadas podem dificultar otimizações ou 
+            mudanças radicais.
+          </li>
+        </ol>
+
+        Exemplos:
+
+        <ol>
+          <li>
+            MULTICS: Pioneiro no uso rigoroso de camadas (anos 1960).
+          </li>
+
+          <li>
+            Sistemas modernos:
+            <ol>
+              <li>Windows NT/2000: Camada HAL (Hardware Abstraction Layer) para 
+                portabilidade.
+              </li>
+
+              <li>
+                Minix 3 e Android: Subsistemas (rede, arquivos) organizados em camadas, seguindo modelos como OSI.
+              </li>
+            </ol>
+          </li>
+        </ol>
+        A estrutura em camadas é elegante teoricamente, mas seu uso integral é 
+        raro devido a trade-offs de desempenho. Sistemas atuais adotam híbridos, 
+        combinando camadas para subsistemas críticos (ex.: rede) com outras abordagens 
+        (micronúcleo/monolítico) para balancear flexibilidade e eficiência.
+      </li>
+
+
+       <li>
+        <h4>Sistemas Híbridos:</h4>
+        <p>
+          O núcleo híbrido surgiu como um equilíbrio entre desempenho (monolítico) e 
+          modularidade (micronúcleo), trazendo componentes críticos de volta ao núcleo 
+          enquanto mantém serviços menos essenciais em espaço de usuário.
+        </p>
+
+        Características:
+        <ol>
+          <li>
+            Combina abordagens:
+
+            <ol>
+              <li>
+                Micronúcleo: Serviços não críticos (ex.: drivers, sistemas de arquivos) 
+                rodam isolados em espaço de usuário.
+              </li>
+              <li>
+                Monolítico: Componentes de alto desempenho (ex.: gerência de memória, 
+                escalonamento) ficam no núcleo.
+              </li>
+              <li>
+                Influência de camadas: Alguns subsistemas são organizados 
+                hierarquicamente para isolamento.
+              </li>
+            </ol>
+          </li>
+        </ol>
+
+        Vantagens:
+        <ol>
+          <li>
+            Desempenho aprimorado: Redução de overhead de comunicação 
+            (evita trocas frequentes de modo kernel/usuário).
+          </li>
+
+          <li>
+            Modularidade relativa: Serviços menos críticos mantêm isolamento e 
+            podem ser atualizados sem reiniciar o núcleo.
+          </li>
+          
+          <li>
+            Robustez: Falhas em serviços não essenciais não comprometem todo o sistema.
+          </li>
+        </ol>
+
+        Desvantagens:
+
+        <ol>
+          <li>
+            Complexidade: Balancear quais componentes ficam no núcleo exige 
+            cuidados no design.
+          </li>
+          <li>
+            Menos flexível que micronúcleos puros: Componentes críticos no 
+            núcleo ainda podem ser interdependentes.
+          </li>
+        </ol>
+
+        Exemplos:
+
+        <ol>
+          <li>
+            Windows NT+ (Windows 2000, XP, 10/11):
+            <ul>
+              <li>
+                Inicialmente micronúcleo, mas migrou subsistemas (ex.: gráficos) para 
+                o núcleo a partir da versão 4.0.
+              </li>
+
+              <li>
+                Usa HAL (Hardware Abstraction Layer) para portabilidade.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            macOS e iOS (XNU):
+            <ul>
+              <li>
+                Combina Mach (micronúcleo) com FreeBSD (monolítico).
+              </li>
+
+              <li>
+                Drivers e sistemas de arquivos rodam em espaço de usuário, enquanto 
+                gerência de memória e IPC ficam no núcleo.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            Linux (parcialmente):
+            <ul>
+              <li>
+                Monolítico, mas suporta módulos carregáveis dinamicamente (similar a híbridos).
+              </li>
+            </ul>
+          </li>
+        </ul>
+        Núcleos híbridos dominam sistemas modernos por oferecerem o melhor dos 
+        dois mundos: desempenho próximo ao monolítico e segurança/modularidade dos 
+        micronúcleos. Essa abordagem é ideal para sistemas que exigem alta eficiência 
+        sem abrir mão de estabilidade (ex.: desktops, servidores, dispositivos móveis).
+      </li>
+    </ol>
+  </div>
+  <div class="tree">
+
+    <div class="tree-title">Base UNIX</div>
+    <ul>
+      <li>
+        <div>UNIX (1969)</div>
+        <ul>
+          <li>
+            <div>BSD (1977)</div>
+            <ul>
+              <li><div>NetBSD (1993)</div></li>
+              <li><div>FreeBSD (1993)</div></li>
+              <li><div>OpenBSD (1995)</div></li>
+              <li>
+                <div>Darwin (2000)</div>
+                <ul>
+                  <li><div>macOS</div></li>
+                  <li><div>iOS</div></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div>System V (1983)</div>
+            <ul>
+              <li><div>Solaris</div></li>
+              <li><div>AIX</div></li>
+              <li><div>HP-UX</div></li>
+            </ul>
+          </li>
+          <li>
+            <div>MINIX (1987)</div>
+            <ul>
+              <li>
+                <div>Linux (1991)</div>
+                <ul>
+                  <li><div>Android</div></li>
+                  <li><div>Chrome OS</div></li>
+                  <li><div>Distros GNU/Linux</div></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="tree-title">Base MS-DOS</div>
+    <ul>
+      <li>
+        <div>MS-DOS (1981)</div>
+        <ul>
+          <li><div>Windows 1.0 (1985)</div></li>
+          <li><div>Windows 2.0 (1987)</div></li>
+          <li><div>Windows 3.x (1990)</div></li>
+          <li>
+            <div>Windows 95</div>
+            <ul>
+              <li><div>Windows 98</div></li>
+              <li><div>Windows Me</div></li>
+            </ul>
+          </li>
+          <li>
+            <div>Windows NT (1993)</div>
+            <ul>
+              <li><div>Windows 2000</div></li>
+              <li><div>Windows XP</div></li>
+              <li><div>Windows Vista</div></li>
+              <li><div>Windows 7</div></li>
+              <li><div>Windows 8 / 8.1</div></li>
+              <li><div>Windows 10</div></li>
+              <li><div>Windows 11</div></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+
+  <div>
+    <h2>
+      Referências
+    </h2>
+  </div>
+</body>
+</html>

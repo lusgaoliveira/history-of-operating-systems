@@ -1,0 +1,106 @@
+/* Container principal que vai conter as duas colunas */
+.container {
+    display: flex;
+    gap: 40px; /* Espaço entre as colunas */
+    margin: 20px 0;
+}
+
+/* Estilo para ambas as colunas */
+.theory, .os_history {
+    flex: 1; /* Faz com que ambas as colunas ocupem espaço igual */
+    padding: 20px;
+    text-align: justify; /* Texto justificado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+/* Estilo específico para a lista */
+.os_history ol {
+    padding-left: 20px;
+}
+
+.os_history li {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theory {
+  margin-bottom: 2rem;
+}
+
+.os_history ol,
+ul,
+ol {
+  padding-left: 1.5rem;
+}
+
+.os_history li,
+li {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.4rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  color: #34495e;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin: 0.5rem 0 1rem 0;
+}
+
+ol li,
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+ul ul,
+ol ol {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+}
