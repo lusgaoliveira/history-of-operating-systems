@@ -276,7 +276,7 @@
       </li>
 
 
-       <li>
+      <li>
         <h4>Sistemas Híbridos:</h4>
         <p>
           O núcleo híbrido surgiu como um equilíbrio entre desempenho (monolítico) e 
@@ -376,61 +376,102 @@
             </ul>
           </li>
         </ul>
-        Núcleos híbridos dominam sistemas modernos por oferecerem o melhor dos 
-        dois mundos: desempenho próximo ao monolítico e segurança/modularidade dos 
-        micronúcleos. Essa abordagem é ideal para sistemas que exigem alta eficiência 
-        sem abrir mão de estabilidade (ex.: desktops, servidores, dispositivos móveis).
+        <p>
+          Núcleos híbridos dominam sistemas modernos por oferecerem o melhor dos 
+          dois mundos: desempenho próximo ao monolítico e segurança/modularidade dos 
+          micronúcleos. Essa abordagem é ideal para sistemas que exigem alta eficiência 
+          sem abrir mão de estabilidade (ex.: desktops, servidores, dispositivos móveis).
+        </p>
       </li>
     </ol>
+
+    <h2>Outras Características</h2>
+    <ul>
+      <li>
+        <strong>Multitarefa:</strong> Capacidade do sistema operacional de gerenciar e executar múltiplos processos 
+        ao mesmo tempo, compartilhando recursos como CPU e memória entre eles. Pode ser:
+        <ul>
+          <li><em>Cooperativa</em>: Cada processo libera voluntariamente o controle da CPU.</li>
+          <li><em>Preemptiva</em>: O sistema operacional decide quando interromper e alternar entre processos.</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Monotarefa:</strong> Executa apenas um processo por vez. Embora raro hoje em dia, esse tipo 
+        era comum em sistemas antigos e embarcados, que não exigiam multitarefa nem tinham recursos para isso.
+      </li>
+
+      <li>
+        <strong>Multiusuário:</strong> Permite que dois ou mais usuários utilizem o sistema simultaneamente, 
+        seja localmente (em terminais) ou remotamente (via rede), com isolamento de dados e permissões entre eles.
+        É comum em servidores, mainframes e sistemas UNIX-like.
+      </li>
+
+      <li>
+        <strong>Monousuário:</strong> O sistema só pode ser utilizado por um único usuário por vez. 
+        Tipicamente encontrado em sistemas embarcados, dispositivos pessoais antigos ou sistemas operacionais 
+        com foco em simplicidade e restrições de hardware.
+      </li>
+    </ul>
   </div>
+
   <div class="tree">
 
     <div class="tree-title">Base UNIX</div>
-    <ul>
+      <ul>
       <li>
         <div>UNIX (1969)</div>
         <ul>
           <li>
             <div>BSD (1977)</div>
             <ul>
-              <li><div>NetBSD (1993)</div></li>
-              <li><div>FreeBSD (1993)</div></li>
-              <li><div>OpenBSD (1995)</div></li>
               <li>
-                <div>Darwin (2000)</div>
+                <div>March (1984)</div>
                 <ul>
-                  <li><div>macOS</div></li>
-                  <li><div>iOS</div></li>
+                  <li><div>Darwin (2000)</div></li>
+                  <ul>
+                    <li><div>macOS (2001)</div></li>
+                    <li><div>iOS (2011)</div></li>
+                  </ul>
                 </ul>
               </li>
+              <li><div>NetBSD (1993)</div>
+                <ul>
+                  <li><div>OpenBSD (1995)</div></li>
+                </ul>
+              </li>
+              <li><div>FreeBSD (1993)</div></li>
             </ul>
           </li>
+
           <li>
-            <div>System V (1983)</div>
+            <div>Unix System III (1981)</div>
             <ul>
-              <li><div>Solaris</div></li>
-              <li><div>AIX</div></li>
-              <li><div>HP-UX</div></li>
+              <li><div>HP-UX (1982)</div></li>
+              <li><div>AIX (1985)</div></li>
+              <li><div>Solaris (1991)</div></li>
             </ul>
           </li>
+
           <li>
             <div>MINIX (1987)</div>
             <ul>
               <li>
                 <div>Linux (1991)</div>
                 <ul>
-                  <li><div>Android</div></li>
-                  <li><div>Chrome OS</div></li>
-                  <li><div>Distros GNU/Linux</div></li>
+                  <li><div>Distros GNU/Linux (1994)</div></li>
+                  <li><div>Android (2008)</div></li>
+                  <li><div>Chrome OS (2011)</div></li>
                 </ul>
               </li>
             </ul>
           </li>
+
         </ul>
       </li>
     </ul>
 
-    <div class="tree-title">Base MS-DOS</div>
+  <div class="tree-title">Base MS-DOS</div>
     <ul>
       <li>
         <div>MS-DOS (1981)</div>
@@ -439,22 +480,22 @@
           <li><div>Windows 2.0 (1987)</div></li>
           <li><div>Windows 3.x (1990)</div></li>
           <li>
-            <div>Windows 95</div>
+            <div>Windows 95 (1995)</div>
             <ul>
-              <li><div>Windows 98</div></li>
-              <li><div>Windows Me</div></li>
+              <li><div>Windows 98 (1998)</div></li>
+              <li><div>Windows Me (2000)</div></li>
             </ul>
           </li>
           <li>
             <div>Windows NT (1993)</div>
             <ul>
-              <li><div>Windows 2000</div></li>
-              <li><div>Windows XP</div></li>
-              <li><div>Windows Vista</div></li>
-              <li><div>Windows 7</div></li>
-              <li><div>Windows 8 / 8.1</div></li>
-              <li><div>Windows 10</div></li>
-              <li><div>Windows 11</div></li>
+              <li><div>Windows 2000 (2000)</div></li>
+              <li><div>Windows XP (2001)</div></li>
+              <li><div>Windows Vista (2007)</div></li>
+              <li><div>Windows 7 (2009)</div></li>
+              <li><div>Windows 8 / 8.1 (2012/2013)</div></li>
+              <li><div>Windows 10 (2015)</div></li>
+              <li><div>Windows 11 (2021)</div></li>
             </ul>
           </li>
         </ul>
@@ -462,11 +503,85 @@
     </ul>
 
   </div>
+  <div class="so-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Sistema Operacional</th>
+          <th>Ano</th>
+          <th>Tipo de Kernel</th>
+          <th>Usuários</th>
+          <th>Tarefa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>UNIX</td><td>1969</td><td>Monolítico</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>BSD</td><td>1977</td><td>Monolítico</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>March</td><td>1984</td><td>Monolítico</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>Darwin</td><td>2000</td><td>Híbrido (XNU)</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>macOS</td><td>2001</td><td>Híbrido (XNU)</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>iOS</td><td>2011</td><td>Híbrido (XNU)</td><td>Monousuário</td><td>Multitarefa</td></tr>
+        <tr><td>NetBSD</td><td>1993</td><td>Monolítico</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>OpenBSD</td><td>1995</td><td>Monolítico</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>FreeBSD</td><td>1993</td><td>Monolítico</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>Unix System III</td><td>1981</td><td>Monolítico</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>HP-UX</td><td>1982</td><td>Monolítico</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>AIX</td><td>1985</td><td>Monolítico</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>Solaris</td><td>1991</td><td>Monolítico</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>MINIX</td><td>1987</td><td>Microkernel</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>Linux</td><td>1991</td><td>Monolítico modular</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>Distros GNU/Linux</td><td>1994</td><td>Monolítico modular</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>Android</td><td>2008</td><td>Monolítico (Linux)</td><td>Monousuário</td><td>Multitarefa</td></tr>
+        <tr><td>Chrome OS</td><td>2011</td><td>Monolítico (Linux)</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>MS-DOS</td><td>1981</td><td>Monolítico</td><td>Monousuário</td><td>Monotarefa</td></tr>
+        <tr><td>Windows 1.0</td><td>1985</td><td>Monolítico</td><td>Monousuário</td><td>Cooperativa</td></tr>
+        <tr><td>Windows 95</td><td>1995</td><td>Híbrido</td><td>Monousuário</td><td>Multitarefa</td></tr>
+        <tr><td>Windows 98</td><td>1998</td><td>Híbrido</td><td>Monousuário</td><td>Multitarefa</td></tr>
+        <tr><td>Windows Me</td><td>2000</td><td>Híbrido</td><td>Monousuário</td><td>Multitarefa</td></tr>
+        <tr><td>Windows NT</td><td>1993</td><td>Híbrido</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>Windows XP</td><td>2001</td><td>Híbrido</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>Windows Vista</td><td>2007</td><td>Híbrido</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>Windows 7</td><td>2009</td><td>Híbrido</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>Windows 8 / 8.1</td><td>2012/2013</td><td>Híbrido</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>Windows 10</td><td>2015</td><td>Híbrido</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+        <tr><td>Windows 11</td><td>2021</td><td>Híbrido</td><td>Multiusuário</td><td>Multitarefa</td></tr>
+      </tbody>
+    </table>
+  </div>
 
   <div>
     <h2>
       Referências
     </h2>
+
+    <ol>
+      <li>
+        MAZIERO, Carlos Alberto. <strong>Sistemas Operacionais: Conceitos e Mecanismos</strong> – Curitiba: DINF - UFPR, 2019. 456 p. : il.; color. ISBN: 978-85-7335-340-2. (E-book).
+      </li>
+      <li>
+        TANENBAUM, Andrew S.; BOS, Herbert. <strong>Sistemas Operacionais Modernos</strong>. 4ª ed. São Paulo: Pearson, 2015.
+      </li>
+      <li>
+        Operating System Documentation and Resources. Disponível em:
+        <a href="https://www.operating-system.org/index.html" target="_blank">https://www.operating-system.org/index.html</a>
+      </li>
+      <li>
+        Hacker News - OS Family Tree Thread. Disponível em:
+        <a href="https://news.ycombinator.com/item?id=28079598" target="_blank">https://news.ycombinator.com/item?id=28079598</a>
+      </li>
+      <li>
+        Reddit /r/coolguides – OS Family Tree. Disponível em:
+        <a href="https://www.reddit.com/r/coolguides/comments/k1lopj/os_family_tree/?rdt=44754" target="_blank">https://www.reddit.com/r/coolguides/comments/k1lopj/os_family_tree/?rdt=44754</a>
+      </li>
+      <li>
+        OS Family Tree (Interativo). Disponível em:
+        <a href="https://eylenburg.github.io/os_familytree.htm" target="_blank">https://eylenburg.github.io/os_familytree.htm</a>
+      </li>
+      <li>
+        Baeldung – Monolithic Kernel in Linux. Disponível em:
+        <a href="https://www.baeldung.com/linux/monolithic-kernel" target="_blank">https://www.baeldung.com/linux/monolithic-kernel</a>
+      </li>
+    </ol>
   </div>
 </body>
 </html>
